@@ -7,7 +7,10 @@ export function hit(target: HTMLElement, props: HitProps) {
         target.style.position = 'relative';
     }
 
+    const time = props.duration ?? 2000;
     const container = document.createElement('div');
+    setTimeout(() => container.parentNode?.removeChild(container), time);
+
     container.style.justifyContent = 'center';
     container.style.alignItems = 'center';
     container.style.position = 'absolute';

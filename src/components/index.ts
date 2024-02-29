@@ -1,4 +1,5 @@
 export { default as ButtonMultiSelect } from './ButtonMultiSelect.svelte';
+export { default as ButtonSelectItem } from './ButtonSelectItem.svelte';
 export { default as ButtonSelect } from './ButtonSelect.svelte';
 export { default as Container } from './Container.svelte';
 export { default as Highlight } from './Highlight.svelte';
@@ -14,8 +15,11 @@ export { default as Expand } from './Expand.svelte';
 export { default as Switch } from './Switch.svelte';
 export { default as Button } from './Button.svelte';
 export { default as Center } from './Center.svelte';
+export { default as Input } from './Input.svelte';
 export { default as Range } from './Range.svelte';
+export { default as Modal } from './Modal.svelte';
 export { default as Card } from './Card.svelte';
 export { default as Icon } from './Icon.svelte';
 export { default as Text } from './Text.svelte';
 export { default as Flex } from './Flex.svelte';
+export { default as Link } from './Link.svelte';

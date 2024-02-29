@@ -2,13 +2,13 @@
     export let gap: number = 6;
 </script>
 
-<div class="main" style="gap:{gap}px;">
+<div class="container {$$props.class}" style="gap:{gap}px;{$$props.style}">
     <slot />
 </div>
 
 <style>
-    .main {
+    .container {
         display: flex;
-        flex-direction: row;
+        align-items: stretch;
     }
 </style>

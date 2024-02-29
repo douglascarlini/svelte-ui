@@ -1,13 +1,13 @@
 <script lang="ts">
     export let rows: number = 5;
-    export let text: string = "";
+    export let value: string = "";
     export let label: string = "";
     export let placeholder: string = "";
 </script>
 
 <div>
     <div class="label">{label}</div>
-    <textarea {placeholder} {rows}>{text}</textarea>
+    <textarea {placeholder} {rows}>{value}</textarea>
 </div>
 
 <style>

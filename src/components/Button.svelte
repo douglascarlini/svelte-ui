@@ -4,7 +4,7 @@
     export let disabled: boolean = false;
     export let outline: boolean = false;
     export let loading: boolean = false;
-    export let accent: boolean = false;
+    export let special: boolean = false;
     export let fit: boolean = false;
     export let icon: string = "";
     export let action = () => {};
@@ -12,7 +12,7 @@
     import config from "../config";
 </script>
 
-<div style="--accent-color: {accent ? config.theme.color.accent : '#333'};">
+<div style="--special-color: {special ? config.theme.color.special : config.theme.color.accent};">
     {#if loading}
         <div class="loader">
             <img alt="Loading" src={spinner} style="width: 24px; opacity: .4;" />
@@ -36,15 +36,15 @@
     }
 
     button {
-        border: 1px solid var(--accent-color);
+        border: 1px solid var(--special-color);
         border-radius: 4px;
         padding: 8px 12px;
         cursor: pointer;
     }
 
     .normal {
-        background-color: var(--accent-color);
-        border: 1px solid var(--accent-color);
+        background-color: var(--special-color);
+        border: 1px solid var(--special-color);
         color: #fff;
     }
 
@@ -53,9 +53,9 @@
     }
 
     .outline {
-        border: 1px solid var(--accent-color);
+        border: 1px solid var(--special-color);
         background-color: #fff;
-        color: var(--accent-color);
+        color: var(--special-color);
     }
 
     .outline:hover {

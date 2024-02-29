@@ -1,9 +1,11 @@
 <script lang="ts">
+    import config from "../config";
+
     export let text: any;
     export let icon: any = null;
     export let size: number = 14;
-    export let color: string = "#333";
     export let duration: number = 2000;
+    export let color: string = config.theme.color.accent;
     export let randomize: any = { position: false, direction: false, speed: false };
 
     let live: boolean = true;
@@ -12,7 +14,7 @@
 </script>
 
 {#if live}
-    <div class="floating-text" on:animationend={die} style="--duration: {duration}ms; background-color: {color}; {randomize.position ? `margin: ${r()}px ${r()}px ${r()}px ${r()}px;` : ''}">
+    <div class="floating-text" on:animationend={die} style="--duration: {duration}ms; background-color: {color};">
         <div style="font-size: {size}px; display: flex; align-items: center; justify-content: between;">
             {#if icon}
                 <i class="fa fa-{icon}" style="font-size: 90%; margin-top: -2px;" />
@@ -34,19 +36,19 @@
     @keyframes anim {
         0% {
             opacity: 0;
+            transform: translateY(0) scale(0);
+        }
+        5% {
+            opacity: 1;
             transform: translateY(0);
         }
-        10% {
+        95% {
             opacity: 1;
             transform: translateY(-10px);
         }
-        90% {
-            opacity: 1;
-            transform: translateY(-15px);
-        }
         100% {
             opacity: 0;
-            transform: translateY(-20px);
+            transform: translateY(-15px) scale(1.5);
         }
     }
 </style>

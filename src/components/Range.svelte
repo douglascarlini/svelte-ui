@@ -1,4 +1,6 @@
 <script lang="ts">
+    import config from "../config";
+
     export let min: number = 0;
     export let max: number = 100;
     export let label: string = "";
@@ -14,15 +16,14 @@
 {#if label.length > 0}
     <div class="label-container">
         <span>{label}</span>
+        <span>{value}</span>
     </div>
 {/if}
 
 <div class="container">
     <div class="range-slider">
-        <input type="range" {min} {max} {value} on:input={updateValue} class="slider-range" style="background: linear-gradient(to right, #333 0%, #333 {thumbPositionPercent}%, #ccc {thumbPositionPercent}%, #ccc 100%);" />
+        <input type="range" {min} {max} {value} on:input={updateValue} class="slider-range" style="background: linear-gradient(to right, {config.theme.color.accent} 0%, {config.theme.color.accent} {thumbPositionPercent}%, #ccc {thumbPositionPercent}%, #ccc 100%);" />
     </div>
-    <span>&nbsp;</span>
-    <span>{value}</span>
 </div>
 
 <style>
@@ -34,7 +35,10 @@
     }
 
     .label-container {
+        justify-content: space-between;
         font-weight: normal;
+        align-items: center;
+        display: flex;
     }
 
     .range-slider {

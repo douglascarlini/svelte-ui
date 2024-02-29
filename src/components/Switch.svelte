@@ -1,20 +1,29 @@
 <script lang="ts">
+    import config from "../config";
+
     export let label: string = "";
+    export let action: () => void;
     export let checked: boolean = false;
     export let disabled: boolean = false;
     export const toggle = () => (disabled ? null : (checked = !checked));
+
+    const onClickHandleEvent = () => {
+        if (action) action();
+        toggle();
+    };
 </script>
 
-<div class="container" style="opacity:{disabled ? 0.5 : 1};" {...$$props}>
+<div class="container" style="--bg-active: {config.theme.color.accent}; opacity:{disabled ? 0.5 : 1};" {...$$props}>
     {#if label.length > 0}
         <div class="label-container">
             <span>{label}</span>
         </div>
     {/if}
-    <label class="switch">
+    <a href={"javascript:;"} class="switch" on:click={onClickHandleEvent} style="display: inline-block;">
         <input type="checkbox" bind:checked {disabled} class="sr-only" />
         <span class="slider {checked ? 'bg-active' : 'bg-inactive'}"></span>
-    </label>
+    </a>
+    <slot />
 </div>
 
 <style>
@@ -37,7 +46,7 @@
     }
 
     .bg-active {
-        background-color: #333;
+        background-color: var(--bg-active);
     }
 
     .switch {

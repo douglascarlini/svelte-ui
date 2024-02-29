@@ -1,8 +1,24 @@
 export default {
     theme: {
         color: {
-            accent: "#9841e0",
-            gradient: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)"
+            special: "#0066FF",
+            accent: "#000000",
+            info: {
+                fg: "#127ab6",
+                bg: "#dcf3ff",
+            },
+            error: {
+                fg: "#b61238",
+                bg: "#ffedf1"
+            },
+            warning: {
+                fg: "#c88f16",
+                bg: "#fff2df"
+            },
+            success: {
+                fg: "#189214",
+                bg: "#e8ffe7"
+            },
         }
     }
 }

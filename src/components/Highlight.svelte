@@ -8,7 +8,7 @@
     import config from "../config";
 </script>
 
-<div class="card" style="--accent-color: {config.theme.color.accent}">
+<div class="card" style="--special-color: {config.theme.color.special}">
     <Expand>
         <div>
             <Expand>
@@ -34,11 +34,11 @@
     }
 
     .color {
-        color: var(--accent-color);
+        color: var(--special-color);
     }
 
     .card {
-        border: 2px solid var(--accent-color);
+        border: 2px solid var(--special-color);
         background-color: white;
         border-radius: 6px;
         padding: 12px 14px;
