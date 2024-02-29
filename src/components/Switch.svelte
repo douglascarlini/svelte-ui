@@ -19,10 +19,10 @@
             <span>{label}</span>
         </div>
     {/if}
-    <a href={"javascript:;"} class="switch" on:click={onClickHandleEvent} style="display: inline-block;">
+    <button class="switch" on:click={onClickHandleEvent} style="display: inline-block;">
         <input type="checkbox" bind:checked {disabled} class="sr-only" />
         <span class="slider {checked ? 'bg-active' : 'bg-inactive'}"></span>
-    </a>
+    </button>
     <slot />
 </div>
 
@@ -81,6 +81,12 @@
 
     input:checked + .slider:before {
         transform: translateX(14px);
+    }
+
+    button {
+        background: none;
+        border: none;
+        padding: 0;
     }
 
     .sr-only {

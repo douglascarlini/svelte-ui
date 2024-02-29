@@ -205,6 +205,14 @@ interface InputProps {
     icon?: string;
 }
 
+interface CalendarProps {
+    style?: string;
+    class?: string;
+    dayNames?: string;
+    monthNames?: string;
+    selectedDate?: Date;
+}
+
 // TOOLS
 
 export function hit(target: HTMLElement, props: HitProps): void;
@@ -221,6 +229,7 @@ export declare class Container extends SvelteComponentTyped<ContainerProps, {}, 
 export declare class TextArea extends SvelteComponentTyped<TextAreaProps, {}, {}> { $$prop_def: TextAreaProps; }
 export declare class ListTile extends SvelteComponentTyped<ListTileProps, {}, {}> { $$prop_def: ListTileProps; }
 export declare class ListItem extends SvelteComponentTyped<ListItemProps, {}, {}> { $$prop_def: ListItemProps; }
+export declare class Calendar extends SvelteComponentTyped<CalendarProps, {}, {}> { $$prop_def: CalendarProps; }
 export declare class LevelUp extends SvelteComponentTyped<LevelUpProps, {}, {}> { $$prop_def: LevelUpProps; }
 export declare class Divider extends SvelteComponentTyped<DividerProps, {}, {}> { $$prop_def: DividerProps; }
 export declare class FlexRow extends SvelteComponentTyped<FlexRowProps, {}, {}> { $$prop_def: FlexRowProps; }
