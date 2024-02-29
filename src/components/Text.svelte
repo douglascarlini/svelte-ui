@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let size: number = 14;
+    export let size: number = 16;
     export let style: string = "";
     export let bold: boolean = false;
 </script>
