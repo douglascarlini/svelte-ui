@@ -17,9 +17,9 @@
 
 {#if show}
     <div style="--padding: {padding}px;">
-        <div class="backdrop" on:click={close}>
-            <div class="container" on:click|stopPropagation>
-                <a class="close" on:click={close}><i class="fa fa-close" /></a>
+        <div class="backdrop" on:click={close} role="button" tabindex="0" on:keydown={() => {}}>
+            <div class="container" on:click|stopPropagation role="button" tabindex="0" on:keydown={() => {}}>
+                <a class="close" href={"#"} on:click={close}><i class="fa fa-close" /></a>
                 <slot />
             </div>
         </div>

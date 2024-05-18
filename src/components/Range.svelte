@@ -2,6 +2,7 @@
     import config from "../config";
 
     export let min: number = 0;
+    export let step: number = 1;
     export let max: number = 100;
     export let label: string = "";
     export let value: number = min;
@@ -22,7 +23,7 @@
 
 <div class="container">
     <div class="range-slider">
-        <input type="range" {min} {max} {value} on:input={updateValue} class="slider-range" style="background: linear-gradient(to right, {config.theme.color.accent} 0%, {config.theme.color.accent} {thumbPositionPercent}%, #ccc {thumbPositionPercent}%, #ccc 100%);" />
+        <input type="range" {min} {max} {value} {step} on:input={updateValue} class="slider-range" style="background: linear-gradient(to right, {config.theme.color.accent} 0%, {config.theme.color.accent} {thumbPositionPercent}%, #ccc {thumbPositionPercent}%, #ccc 100%);" />
     </div>
 </div>
 

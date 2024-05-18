@@ -96,7 +96,6 @@
 <style>
     .calendar-container {
         text-align: center;
-        /* width: 250px; */
     }
 
     .calendar-header,
@@ -121,6 +120,7 @@
     .day {
         background-color: #eee;
         border-radius: 4px;
+        font-size: 12px;
         cursor: pointer;
         role: "button";
         tabindex: "0";
