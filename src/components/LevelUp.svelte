@@ -14,11 +14,10 @@
 </script>
 
 {#if live}
-    <div class="floating-text" on:animationend={die} style="--duration: {duration}ms; background-color: {color};">
-        <div style="font-size: {size}px; display: flex; align-items: center; justify-content: between;">
+    <div class="container" on:animationend={die} style="--duration: {duration}ms; background-color: {color};">
+        <div class="content" style="font-size: {size}px;">
             {#if icon}
-                <i class="fa fa-{icon}" style="font-size: 90%; margin-top: -2px;" />
-                <span>&nbsp;</span>
+                <i class="fa fa-{icon}"></i>
             {/if}
             <span>{text}</span>
         </div>
@@ -26,11 +25,22 @@
 {/if}
 
 <style>
-    .floating-text {
+    i {
+        margin-top: -2px;
+        margin-right: 4px;
+    }
+
+    .container {
         color: #fff;
         padding: 4px 6px;
         border-radius: 6px;
         animation: anim var(--duration) ease-out forwards;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: between;
     }
 
     @keyframes anim {
@@ -38,11 +48,11 @@
             opacity: 0;
             transform: translateY(0) scale(0);
         }
-        5% {
+        10% {
             opacity: 1;
             transform: translateY(0);
         }
-        95% {
+        90% {
             opacity: 1;
             transform: translateY(-10px);
         }

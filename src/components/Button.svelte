@@ -1,6 +1,7 @@
 <script lang="ts">
     import spinner from "../assets/img/spinner.svg";
 
+    export let color: string = config.theme.color.accent;
     export let disabled: boolean = false;
     export let outline: boolean = false;
     export let loading: boolean = false;
@@ -12,7 +13,7 @@
     import config from "../config";
 </script>
 
-<div style="--special-color: {special ? config.theme.color.special : config.theme.color.accent};">
+<div style="--special-color: {special ? config.theme.color.special : color};">
     {#if loading}
         <div class="loader">
             <img alt="Loading" src={spinner} style="width: 24px; opacity: .4;" />

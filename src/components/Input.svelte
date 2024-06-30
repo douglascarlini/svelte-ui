@@ -5,9 +5,8 @@
     export let icon: string;
     export let feedback: any;
 
+    $: color = feedback ? config.theme.color[feedback.type] : { fg: "#fff", bg: "#000" };
     $: fbIcon = feedback ? (feedback.type == "info" ? "info-circle" : feedback.type == "warning" ? "warning" : feedback.type == "success" ? "check" : feedback.type == "error" ? "x" : "") : "";
-
-    $: color = config.theme.color[feedback.type] ?? { fg: "#fff", bg: "#000" };
 </script>
 
 <div class="container" style="--fg: {color.fg}; --bg: {color.bg}; --margin: {icon ? 36 : 14}px">

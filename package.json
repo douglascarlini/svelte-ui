@@ -1,7 +1,7 @@
 {
   "type": "module",
+  "version": "0.0.4",
   "name": "@dcarlini/svelte-ui",
-  "version": "0.0.1",
   "description": "Svelte UI Kit",
   "module": "dist/index.mjs",
   "svelte": "src/index.ts",
@@ -11,8 +11,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "build": "rm -rf dist && tsc --project tsconfig.json && tsc --project tsconfig.cjs.json"
   },
   "repository": {
     "type": "git",

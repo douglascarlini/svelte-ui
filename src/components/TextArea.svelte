@@ -7,7 +7,7 @@
 
 <div>
     <div class="label">{label}</div>
-    <textarea {placeholder} {rows}>{value}</textarea>
+    <textarea {placeholder} {rows} bind:value></textarea>
 </div>
 
 <style>
