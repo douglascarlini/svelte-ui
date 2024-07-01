@@ -19,6 +19,7 @@ export declare class TextArea extends SvelteComponentTyped<TextAreaProps, {}, {}
 export declare class ListTile extends SvelteComponentTyped<ListTileProps, {}, {}> { $$prop_def: ListTileProps; }
 export declare class ListItem extends SvelteComponentTyped<ListItemProps, {}, {}> { $$prop_def: ListItemProps; }
 export declare class Calendar extends SvelteComponentTyped<CalendarProps, {}, {}> { $$prop_def: CalendarProps; }
+export declare class Progress extends SvelteComponentTyped<ProgressProps, {}, {}> { $$prop_def: ProgressProps; }
 export declare class LevelUp extends SvelteComponentTyped<LevelUpProps, {}, {}> { $$prop_def: LevelUpProps; }
 export declare class Divider extends SvelteComponentTyped<DividerProps, {}, {}> { $$prop_def: DividerProps; }
 export declare class FlexRow extends SvelteComponentTyped<FlexRowProps, {}, {}> { $$prop_def: FlexRowProps; }

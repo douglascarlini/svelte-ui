@@ -7,6 +7,7 @@ export { default as TextArea } from './TextArea.svelte';
 export { default as ListTile } from './ListTile.svelte';
 export { default as ListItem } from './ListItem.svelte';
 export { default as Calendar } from './Calendar.svelte';
+export { default as Progress } from './Progress.svelte';
 export { default as LevelUp } from './LevelUp.svelte';
 export { default as Divider } from './Divider.svelte';
 export { default as FlexRow } from './FlexRow.svelte';
