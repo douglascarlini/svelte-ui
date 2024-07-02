@@ -3,6 +3,9 @@ export default {
         color: {
             special: "#0066FF",
             accent: "#000000",
+            second: "#AAAAAA",
+            third: "#DDDDDD",
+            light: "#EEEEEE",
             info: {
                 fg: "#127ab6",
                 bg: "#dcf3ff",

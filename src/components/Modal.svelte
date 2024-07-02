@@ -19,7 +19,7 @@
     <div style="--padding: {padding}px;">
         <div class="backdrop" on:click={close} role="button" tabindex="0" on:keydown={() => {}}>
             <div class="container" on:click|stopPropagation role="button" tabindex="0" on:keydown={() => {}}>
-                <a class="close" href={"#"} on:click={close}><i class="fa fa-close" /></a>
+                <button class="close" on:click={close}><i class="fa fa-close" /></button>
                 <slot />
             </div>
         </div>
@@ -34,6 +34,7 @@
         align-items: center;
         position: fixed;
         display: flex;
+        z-index: 999;
         height: 100%;
         width: 100%;
         left: 0;
@@ -51,8 +52,10 @@
     .close {
         animation: fadeIn2 1s ease;
         position: absolute;
+        background: none;
         font-size: 30px;
         cursor: pointer;
+        border: none;
         color: #fff;
         right: 20px;
         top: 10px;
