@@ -28,7 +28,7 @@
 
 <style>
     .backdrop {
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.8);
         animation: fadeIn 0.3s ease;
         justify-content: center;
         align-items: center;
