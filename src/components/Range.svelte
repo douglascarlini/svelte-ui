@@ -6,9 +6,11 @@
     export let max: number = 100;
     export let label: string = "";
     export let value: number = min;
+    export let changed = (): void => {};
 
     const updateValue = (event: any) => {
         value = +event.target.value;
+        changed();
     };
 
     $: thumbPositionPercent = ((value - min) / (max - min)) * 100;

@@ -9,6 +9,7 @@
     export let fit: boolean = false;
     export let icon: string = "";
     export let action = () => {};
+    export let text: string;
 
     import config from "../config";
 </script>
@@ -21,6 +22,7 @@
     {:else}
         <button on:click={disabled || loading ? () => {} : action} class="{outline ? 'outline' : 'normal'} {disabled ? 'disabled' : ''}" style={fit ? "width:100%;" : ""}>
             {#if icon.length > 0}<i class="fa fa-{icon}" />{/if}
+            {#if text}{text}{/if}
             <slot />
         </button>
     {/if}

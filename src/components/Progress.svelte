@@ -1,28 +1,34 @@
 <script lang="ts">
+    import config from "../config";
+
     export let value: number = 0;
-    export let color: string = "#333";
+    export let color: string = config.theme.color.accent;
 
     let val = 0;
     let interval: any;
 
     $: {
         clearInterval(interval);
-        if (val < value) {
-            interval = setInterval(() => {
-                if (val < value) {
-                    val += 0.1 * (value - val);
-                } else {
-                    clearInterval(interval);
-                }
-            }, 20);
-        } else if (val > value) {
-            interval = setInterval(() => {
-                if (val > value) {
-                    val -= 0.1 * (value - val);
-                } else {
-                    clearInterval(interval);
-                }
-            }, 20);
+        if (value == 0) {
+            val = 0;
+        } else {
+            if (val < value) {
+                interval = setInterval(() => {
+                    if (val < value) {
+                        val += 0.1 * (value - val);
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 20);
+            } else if (val > value) {
+                interval = setInterval(() => {
+                    if (val > value) {
+                        val -= 0.1 * (value - val);
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 20);
+            }
         }
     }
 </script>

@@ -9,6 +9,7 @@
     export let label: any = null;
     export let items: any[] = [];
     export let selected: any = null;
+    export let key: string = "label";
 
     const chunk = (array: any[], size: number) => Array.from({ length: Math.ceil(array.length / size) }, (_, i) => array.slice(i * size, i * size + size));
 </script>
@@ -24,7 +25,7 @@
     {#each chunk(items, cols) as c}
         <FlexRow>
             {#each c as i}
-                <Flex><Button fit outline={selected != i} action={() => (selected = i)}>{i.label}</Button></Flex>
+                <Flex><Button fit outline={selected != i} action={() => (selected = i)}>{key && key.length > 0 ? i[key] : i}</Button></Flex>
             {/each}
         </FlexRow>
     {/each}

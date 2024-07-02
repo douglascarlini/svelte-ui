@@ -2,7 +2,7 @@
     import { onMount } from "svelte";
 
     export let show: boolean = false;
-    export let padding: number = 20;
+    export let padding: number = 10;
     export let close: () => void;
 
     onMount(() => {
