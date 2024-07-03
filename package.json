@@ -1,11 +1,11 @@
 {
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "name": "@dcarlini/svelte-ui",
   "description": "Svelte UI Kit",
-  "module": "dist/index.mjs",
+  "module": "dist/esm/index.js",
   "svelte": "src/index.ts",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
   "types": "index.d.ts",
   "publishConfig": {
     "access": "public"
@@ -40,7 +40,13 @@
   "files": ["dist"],
   "exports": {
     ".": {
-      "svelte": "./dist/index.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "svelte": "./dist/esm/index.js"
+    },
+    "./*": {
+      "import": "./dist/esm/*.js",
+      "require": "./dist/cjs/*.js"
     }
   }
 }
