@@ -9,26 +9,26 @@
 
     $: {
         clearInterval(interval);
-        if (value == 0) {
-            val = 0;
-        } else {
-            if (val < value) {
-                interval = setInterval(() => {
-                    if (val < value) {
-                        val += 0.1 * (value - val);
-                    } else {
-                        clearInterval(interval);
-                    }
-                }, 20);
-            } else if (val > value) {
-                interval = setInterval(() => {
-                    if (val > value) {
-                        val -= 0.1 * (value - val);
-                    } else {
-                        clearInterval(interval);
-                    }
-                }, 20);
-            }
+        if (val < value) {
+            interval = setInterval(() => {
+                if (val < value) {
+                    val += 0.1 * (value - val);
+                    if (val > 100) val = 100;
+                    if (val < 0) val = 0;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 20);
+        } else if (val > value) {
+            interval = setInterval(() => {
+                if (val > value) {
+                    val -= 0.1 * (value - val);
+                    if (val > 100) val = 100;
+                    if (val < 0) val = 0;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 20);
         }
     }
 </script>
