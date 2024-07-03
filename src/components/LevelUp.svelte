@@ -6,7 +6,7 @@
     export let size: number = 14;
     export let duration: number = 2000;
     export let color: string = config.theme.color.accent;
-    export let randomize: any = { position: false, direction: false, speed: false };
+    // export let randomize: any = { position: false, direction: false, speed: false };
 
     let live: boolean = true;
     const die = () => (live = false);
