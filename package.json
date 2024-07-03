@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "name": "@dcarlini/svelte-ui",
   "description": "Svelte UI Kit",
   "module": "dist/index.mjs",
