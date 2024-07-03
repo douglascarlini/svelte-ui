@@ -25,7 +25,7 @@
     {#each chunk(items, cols) as c}
         <FlexRow>
             {#each c as i}
-                <Flex><Button fit outline={selected != i} action={() => (selected = i)}>{key && key.length > 0 ? i[key] : i}</Button></Flex>
+                <Flex><Button fit outline={selected != i} action={() => (selected = selected == i ? null : i)}>{key && key.length > 0 ? i[key] : i}</Button></Flex>
             {/each}
         </FlexRow>
     {/each}
