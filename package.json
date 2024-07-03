@@ -1,17 +1,17 @@
 {
   "type": "module",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "name": "@dcarlini/svelte-ui",
   "description": "Svelte UI Kit",
-  "module": "dist/esm/index.js",
+  "module": "dist/index.js",
   "svelte": "src/index.ts",
-  "main": "dist/cjs/index.js",
+  "main": "dist/index.js",
   "types": "index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "rm -rf dist && tsc --project tsconfig.json && tsc --project tsconfig.cjs.json"
+    "build": "rm -rf dist && tsc --project tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,5 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1"
-  },
-  "files": ["dist"]
+  }
 }
